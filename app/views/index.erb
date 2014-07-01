@@ -1,0 +1,20 @@
+<div class="container">
+  <h3>Welcome to Ken.ly!</h3>
+  <h5>Shorten Yo' Stuff With Us!</h5>
+
+  <% @urls.each do  |url| %>
+      <p>
+        <a href="http://localhost:9393/<%= url.short_url %>">localhost:9393/<%= url.short_url %></a>
+      </p>  
+  <% end %>
+
+
+  <form id="input_form" action="/urls" method="post" >
+    <input type="text" name="url" placeholder="Enter your URL">
+    <input type="submit">
+  </form>
+
+  
+</div>
+
+
